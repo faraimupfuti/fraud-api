@@ -1,0 +1,123 @@
+{
+  "n_transactions": 61251,
+  "fraud_rate": 0.020424156340304648,
+  "test_size": 15313,
+  "metrics": {
+    "logistic_regression": {
+      "roc_auc": 0.9856924387646433,
+      "pr_auc": 0.9184717109050299,
+      "confusion_matrix": {
+        "tn": 14680,
+        "fp": 320,
+        "fn": 24,
+        "tp": 289
+      }
+    },
+    "random_forest": {
+      "roc_auc": 0.9947133120340789,
+      "pr_auc": 0.9481856802525993,
+      "confusion_matrix": {
+        "tn": 14979,
+        "fp": 21,
+        "fn": 39,
+        "tp": 274
+      }
+    }
+  },
+  "feature_importance": [
+    [
+      "implied_speed_kmh",
+      0.18881235673468258
+    ],
+    [
+      "txn_count_1h",
+      0.1448000355938982
+    ],
+    [
+      "seconds_since_prev",
+      0.12985815421784017
+    ],
+    [
+      "amount",
+      0.11347918825197666
+    ],
+    [
+      "amount_zscore",
+      0.10568912017093211
+    ],
+    [
+      "txn_count_24h",
+      0.0917778421105476
+    ],
+    [
+      "channel_Internet Banking",
+      0.045209046094737984
+    ],
+    [
+      "mcc_5999",
+      0.037679410437692774
+    ]
+  ],
+  "flagged_samples": [
+    {
+      "transaction_id": "TXN0910238",
+      "card_id": "CARD000514",
+      "channel": "POS",
+      "amount": 53.15,
+      "currency": "ZWG",
+      "fraud_pattern": "velocity_abuse",
+      "city": "Masvingo",
+      "hour": 8
+    },
+    {
+      "transaction_id": "TXN0900547",
+      "card_id": "CARD000435",
+      "channel": "Internet Banking",
+      "amount": 1.72,
+      "currency": "USD",
+      "fraud_pattern": "card_testing",
+      "city": "Harare",
+      "hour": 8
+    },
+    {
+      "transaction_id": "TXN0900331",
+      "card_id": "CARD000349",
+      "channel": "Internet Banking",
+      "amount": 1.25,
+      "currency": "USD",
+      "fraud_pattern": "card_testing",
+      "city": "Mutare",
+      "hour": 1
+    },
+    {
+      "transaction_id": "TXN0900072",
+      "card_id": "CARD002938",
+      "channel": "Internet Banking",
+      "amount": 0.99,
+      "currency": "ZWG",
+      "fraud_pattern": "card_testing",
+      "city": "Chinhoyi",
+      "hour": 1
+    },
+    {
+      "transaction_id": "TXN0910329",
+      "card_id": "CARD003663",
+      "channel": "POS",
+      "amount": 371.98,
+      "currency": "USD",
+      "fraud_pattern": "velocity_abuse",
+      "city": "Mutare",
+      "hour": 12
+    },
+    {
+      "transaction_id": "TXN0900353",
+      "card_id": "CARD000280",
+      "channel": "Internet Banking",
+      "amount": 2.0,
+      "currency": "USD",
+      "fraud_pattern": "card_testing",
+      "city": "Bulawayo",
+      "hour": 15
+    }
+  ]
+}
